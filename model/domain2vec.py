@@ -65,8 +65,8 @@ X_test_array_1 = np.array(X_test_array_1)
 X_test_array_2 = np.array(X_test_array_2)
 
 def build_model():
-    domain2vec_1 = Input(shape=(1,128),name='go2vec1')
-    domain2vec_2 = Input(shape=(1,128),name='go2vec2')
+    domain2vec_1 = Input(shape=(1,128),name='domain2vec1')
+    domain2vec_2 = Input(shape=(1,128),name='domain2vec2')
     s1 = keras.layers.Flatten()(domain2vec_1)
     s2 = keras.layers.Flatten()(domain2vec_2)
     add_merge_text = concatenate([s1,s2]) 
@@ -75,7 +75,7 @@ def build_model():
     x = Dense(16, activation='linear')(x)
     x = keras.layers.LeakyReLU(alpha=0.1)(x)
     main_output = Dense(2, activation='softmax')(x)
-    merge_model = Model(inputs=[go2vec_1, go2vec_2], outputs=[main_output])
+    merge_model = Model(inputs=[domain2vec_1, domain2vec_2], outputs=[main_output])
     return merge_model
 
 from sklearn.model_selection import KFold, ShuffleSplit
