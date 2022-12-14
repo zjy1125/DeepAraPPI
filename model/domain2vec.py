@@ -51,16 +51,16 @@ X_train,X_test,y_train,y_test = train_test_split(all_sample,all_label,test_size=
 X_train_array_1 = []
 X_train_array_2 = []
 for train_sample in X_train:
-    X_train_array_1.append(all_pro_go2vec[train_sample[0]])
-    X_train_array_2.append(all_pro_go2vec[train_sample[1]])
+    X_train_array_1.append(all_pro_domain2vec[train_sample[0]])
+    X_train_array_2.append(all_pro_domain2vec[train_sample[1]])
 X_train_array_1 = np.array(X_train_array_1)
 X_train_array_2 = np.array(X_train_array_2)
 
 X_test_array_1 = []
 X_test_array_2 = []
 for test_sample in X_test:
-    X_test_array_1.append(all_pro_go2vec[test_sample[0]])
-    X_test_array_2.append(all_pro_go2vec[test_sample[1]])
+    X_test_array_1.append(all_pro_domain2vec[test_sample[0]])
+    X_test_array_2.append(all_pro_domain2vec[test_sample[1]])
 X_test_array_1 = np.array(X_test_array_1)
 X_test_array_2 = np.array(X_test_array_2)
 
