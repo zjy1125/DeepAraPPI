@@ -29,7 +29,7 @@ def get_sample_label(file):
     labels = np.array(labels)
     return samples,labels
   
-sample_file = '/home/jyzheng/data/high_p_n_ara_PPI_1021_1_10.txt'
+sample_file = 'ara_data/ara_ppi_sample.txt'
 all_sample,all_label = get_sample_label(sample_file)
 
 def get_embeddings(embedding_file):
@@ -44,7 +44,7 @@ def get_embeddings(embedding_file):
                 vec = list(float(i) for i in vec)
                 vec = np.array([vec])
                 all_pro_vec[pro] = vec   
-all_pro_go2vec = get_embeddings('data/28361_ara_pro_go2vec_0917.txt')
+all_pro_go2vec = get_embeddings('ara_data/ara_go2vec_embeddings.txt')
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(all_sample,all_label,test_size=0.2,random_state=63)
 

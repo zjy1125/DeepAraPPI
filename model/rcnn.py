@@ -30,7 +30,7 @@ def get_sample_label(file):
     samples = np.array(samples)
     labels = np.array(labels)
     return samples,labels
-sample_file = 'data/ara_ppi_sample.txt'
+sample_file = 'ara_data/ara_ppi_sample.txt'
 all_sample,all_label = get_sample_label(sample_file)
 
 def get_pro_embedding(pro_file,embedding_file):
@@ -62,8 +62,8 @@ def get_pro_embedding(pro_file,embedding_file):
             seq_vec = np.concatenate((seq_vec,np.zeros((2000 - len(seq_vec), 32))))
         pros_vec[pro] = seq_vec
     return pros_vec
-seq_file = 'data/ara_sequence.txt'
-emb_file = 'data/aa_embeddings.txt' 
+seq_file = 'ara_data/ara_sequence.txt'
+emb_file = 'ara_data/aa_embeddings.txt' 
 all_pro_vec = get_pro_embedding(seq_file, emb_files)
 
 from sklearn.model_selection import train_test_split
