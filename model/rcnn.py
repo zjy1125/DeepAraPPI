@@ -62,7 +62,7 @@ def get_pro_embedding(pro_file,embedding_file):
             seq_vec = np.concatenate((seq_vec,np.zeros((2000 - len(seq_vec), 32))))
         pros_vec[pro] = seq_vec
     return pros_vec
-seq_file = 'data/28361_sequence_1.txt'
+seq_file = 'data/ara_sequence.txt'
 emb_file = 'data/epoch_5_sg_0_1_3_word2vec.txt' 
 all_pro_vec = get_pro_embedding(seq_file, emb_files)
 
