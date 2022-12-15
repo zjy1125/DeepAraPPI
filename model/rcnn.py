@@ -30,7 +30,7 @@ def get_sample_label(file):
     samples = np.array(samples)
     labels = np.array(labels)
     return samples,labels
-sample_file = 'data/high_p_n_ara_PPI_1021_1_10.txt'
+sample_file = 'data/ara_ppi_sample.txt'
 all_sample,all_label = get_sample_label(sample_file)
 
 def get_pro_embedding(pro_file,embedding_file):
