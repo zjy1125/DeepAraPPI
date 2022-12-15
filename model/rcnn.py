@@ -63,7 +63,7 @@ def get_pro_embedding(pro_file,embedding_file):
         pros_vec[pro] = seq_vec
     return pros_vec
 seq_file = 'data/ara_sequence.txt'
-emb_file = 'data/epoch_5_sg_0_1_3_word2vec.txt' 
+emb_file = 'data/aa_embeddings.txt' 
 all_pro_vec = get_pro_embedding(seq_file, emb_files)
 
 from sklearn.model_selection import train_test_split
