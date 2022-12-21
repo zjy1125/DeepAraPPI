@@ -44,7 +44,7 @@ def get_embeddings(embedding_file):
                 vec = list(float(i) for i in vec)
                 vec = np.array([vec])
                 all_pro_vec[pro] = vec   
-all_pro_go2vec = get_embeddings('ara_data/ara_go2vec_embeddings.txt')
+all_pro_go2vec = get_embeddings('embeddings/ara_go2vec_embeddings.txt')
 from sklearn.model_selection import train_test_split
 X_train,X_test,y_train,y_test = train_test_split(all_sample,all_label,test_size=0.2,random_state=63)
 
